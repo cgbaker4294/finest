@@ -1,1 +1,65 @@
-/* Add styles here */
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+.character-sheet-section {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+h2 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+.attribute-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.attribute-item {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Add your CSS here */
+.sidebar {
+ position: fixed;
+ right: 0;
+ top: 0;
+ width: 300px; /* Adjust width as needed */
+ height: 100%;
+ background-color: #fff;
+ box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+ transition: transform 0.3s ease-in-out;
+ transform: translateX(100%); /* Initially hidden */
+ z-index: 1000;
+ padding: 20px;
+ box-sizing: border-box;
+ overflow-y: auto; /* Enable scrolling if content exceeds height */
+}
+
+.sidebar-open {
+ transform: translateX(0); /* Slide in */
+}
+
