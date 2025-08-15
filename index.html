@@ -1,124 +1,112 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Finest Character Sheet</title>
-  <link href='/style.css' rel='stylesheet'>
-</head>
-<body>
-  <h1>The Finest Character Sheet</h1>
+<div>
+    <label for="character-name-input">Character Name:</label>
+    <input type="text" id="character-name-input">
+</div>
 
-  <section id="basic-info">
-    <h2>Basic Information</h2>
+<div>
+    <label for="player-name-input">Player Name:</label>
+    <input type="text" id="player-name-input">
+</div>
+
+
+<section id="hit-points">
     <div>
-      <label for="character-name">Character Name:</label>
-      <input type="text" id="character-name">
+        <label for="power-level-value">Power Level:</label>
+        <span id="power-level-value">0</span>
+    </div>
+    <h2>Hit Points</h2>
+    <div>
+        <label for="max-hp-value">Max Hit Points:</label>
+        <span id="max-hp-value">0</span>
     </div>
     <div>
-      <label for="player-name">Player Name:</label>
-      <input type="text" id="player-name">
+        <label for="current-hp-input">Current Hit Points:</label>
+        <input type="number" id="current-hp-input">
     </div>
-  </section>
+</section>
 
-  <section id="attributes">
+<section id="attributes">
     <h2>Attributes</h2>
-    <div class="attribute-category">
-      <h3>Physical</h3>
-      <div>
+    <div>
         <label for="brawn">Brawn:</label>
         <input type="number" id="brawn" min="1">
         <span class="modifier" id="brawn-mod">Mod: 0</span>
-      </div>
-      <div>
+        <label for="brawn-rerolls">Rerolls:</label>
+        <input type="number" class="rerolls-input" id="brawn-rerolls" min="0">
+        <label for="brawn-success">Success Requirement:</label>
+        <span class="success-requirement" id="brawn-success">0</span>
+    </div>
+
+    <div>
         <label for="willpower">Willpower:</label>
         <input type="number" id="willpower" min="1">
         <span class="modifier" id="willpower-mod">Mod: 0</span>
-      </div>
-      <div>
+        <label for="willpower-rerolls">Rerolls:</label>
+        <input type="number" class="rerolls-input" id="willpower-rerolls" min="0">
+        <label for="willpower-success">Success Requirement:</label>
+        <span class="success-requirement" id="willpower-success">0</span>
+    </div>
+
+    <div>
         <label for="agility">Agility:</label>
         <input type="number" id="agility" min="1">
         <span class="modifier" id="agility-mod">Mod: 0</span>
-      </div>
+        <label for="agility-rerolls">Rerolls:</label>
+        <input type="number" class="rerolls-input" id="agility-rerolls" min="0">
+        <label for="agility-success">Success Requirement:</label>
+        <span class="success-requirement" id="agility-success">0</span>
     </div>
-    <div class="attribute-category">
-      <h3>Mental</h3>
-      <div>
+
+    <div>
         <label for="judgement">Judgement:</label>
         <input type="number" id="judgement" min="1">
         <span class="modifier" id="judgement-mod">Mod: 0</span>
-      </div>
-      <div>
+        <label for="judgement-rerolls">Rerolls:</label>
+        <input type="number" class="rerolls-input" id="judgement-rerolls" min="0">
+        <label for="judgement-success">Success Requirement:</label>
+        <span class="success-requirement" id="judgement-success">0</span>
+    </div>
+
+    <div>
         <label for="comprehension">Comprehension:</label>
         <input type="number" id="comprehension" min="1">
         <span class="modifier" id="comprehension-mod">Mod: 0</span>
-      </div>
-      <div>
+        <label for="comprehension-rerolls">Rerolls:</label>
+        <input type="number" class="rerolls-input" id="comprehension-rerolls" min="0">
+        <label for="comprehension-success">Success Requirement:</label>
+        <span class="success-requirement" id="comprehension-success">0</span>
+    </div>
+
+    <div>
         <label for="presence">Presence:</label>
         <input type="number" id="presence" min="1">
         <span class="modifier" id="presence-mod">Mod: 0</span>
-      </div>
+        <label for="presence-rerolls">Rerolls:</label>
+        <input type="number" class="rerolls-input" id="presence-rerolls" min="0">
+        <label for="presence-success">Success Requirement:</label>
+        <span class="success-requirement" id="presence-success">0</span>
     </div>
-  </section>
 
-  <section id="power-points">
-    <h2>Power Level & Power Points</h2>
-    <div>Power Level (PL): <span id="power-level">0</span></div>
-  </section>
+</section>
+<div>
+    <label for="speed-value">Speed:</label>
+    <span id="speed-value">0</span>
+</div>
+<div>
+    <label for="action-points-value">Action Points:</label>
+    <span id="action-points-value">0</span>
+</div>
+<div>
+    <label for="focus-points-value">Focus Points:</label>
+    <span id="focus-points-value">0</span>
+</div>
+<div>
+    <label for="awareness-score-value">Awareness Score:</label>
+    <span id="awareness-score-value">0</span>
+</div>
+<div>
+    <label for="onomatopoeia-limit-value">Onomatopoeia Limit:</label>
+    <span id="onomatopoeia-limit-value">0</span>
+</div>
 
-  <section id="derived-stats">
-    <h2>Derived Statistics</h2>
-    <div>Speed: <span id="speed">0</span></div>
-    <div>Action Points (AP): <span id="action-points">0</span></div>
-    <div>Max Focus: <span id="max-focus">0</span></div>
-    <div>Awareness: <span id="awareness">0</span></div>
-    <div>Onomatopoeia Limit (OL): <span id="ol">0</span></div>
-    <div>Max Hit Points (HP): <span id="max-hp">0</span></div>
-    <div>Current HP: <input type="number" id="current-hp" min="0"></div>
-  </section>
-
- <section id="optional-stats">
- <h2>Optional Stats</h2>
-    <div>
-      <label for="total-plot-armor">Total Plot Armor Dice:</label>
-      <input type="number" id="total-plot-armor" min="0">
-    </div>
-    <div>
-      <label for="spent-plot-armor">Spent Plot Armor Dice:</label>
-      <input type="number" id="spent-plot-armor" min="0">
-    </div>
- </section>
-
-  <section id="sections">
-    <h2>Other Sections</h2>
-    <label for="rerolls">Rerolls:</label><br>
-    <textarea id="rerolls"></textarea><br>
-    <label for="inventory">Inventory:</label><br>
-    <textarea id="inventory"></textarea><br>
-    <label for="skills">Skills/Proficiencies:</label><br>
-    <textarea id="skills"></textarea><br>
-  </section>
-
- <button id="open-sidebar-btn">Open Powers List</button>
-
-  <!-- Sidebar structure -->
-  <div class="sidebar" id="powers-sidebar">
-    <button id="close-sidebar-btn">Close Sidebar</button>
-    <h2>Powers/Abilities/Augmentations</h2>
-    <div id="powers-list-container">
-      </div>
-    <button id="add-power-btn">Add Power</button>
-    </div>
-    <template id="power-template">
-      <div class="power-entry">
-        <label>Name: <input type="text" class="power-name"></label>
-        <label>Cost: <input type="number" class="power-cost" min="0" value="0"></label>
-        <label>Description: <textarea class="power-description"></textarea></label>
-        <button class="remove-power-btn">Remove</button>
-      </div>
-    </template>
-  </section>
-
-  <script defer type="text/javascript" src="/main.js"></script>
-</body>
-</html>
+<script src="main.js"></script>
