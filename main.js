@@ -69,19 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Consolidate element selections at the beginning of DOMContentLoaded
-    const sidebar = document.querySelector('.sidebar');
-    const openSidebarBtn = document.getElementById('open-sidebar-btn');
-    const closeSidebarBtn = document.getElementById('close-sidebar-btn');
-    const overlay = document.querySelector('.overlay');
     const addPowerBtn = document.getElementById('add-power-btn');
     const powersListContainer = document.getElementById('powers-list-container');
-    const powerTemplate = document.getElementById('power-template');
-
-    const closeSidebar = () => {
-        sidebar.classList.remove('sidebar-open');
-        overlay.classList.remove('overlay-visible');
-    };
  
     if (openSidebarBtn) {
         openSidebarBtn.addEventListener('click', () => {
@@ -94,12 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Open sidebar button not found.');
     }
 
-
-    if (closeSidebarBtn) {
-        closeSidebarBtn.addEventListener('click', closeSidebar); // Use the closeSidebar function defined earlier
-    } else {
-        console.error('Close sidebar button not found.');
-    }
 
     const predefinedPowers = [
         { name: 'Super Strength', cost: 10, description: 'Grants incredible physical strength.' },
